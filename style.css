@@ -282,7 +282,6 @@ div {
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  /* Menos espacio entre columnas */
   justify-content: center;
   align-items: flex-start;
   margin-top: 1rem;
@@ -291,7 +290,6 @@ div {
 .kanban-block,
 .kanban-block-kanban-form {
   min-width: 140px;
-  /* Más pequeñas */
   max-width: 180px;
   min-height: 120px;
   padding: 0.5rem;
@@ -333,4 +331,20 @@ div {
   font-size: 0.95rem;
   padding: 0.3rem 0;
   margin-top: 0.3rem;
+}
+
+/* Colores para las tareas según el estado */
+.kanban-tarea.pendiente {
+  background: #ffdddd;
+  border-left: 5px solid #d32f2f;
+}
+
+.kanban-tarea.progreso {
+  background: #fff4e0;
+  border-left: 5px solid #ff9800;
+}
+
+.kanban-tarea.completado {
+  background: #e0ffe0;
+  border-left: 5px solid #388e3c;
 }

@@ -59,7 +59,7 @@ function agregarTareaKanban(event) {
 
   // Crear la tarjeta de tarea
   const tarea = document.createElement("div");
-  tarea.className = "kanban-tarea";
+  tarea.className = "kanban-tarea pendiente";
   tarea.draggable = true;
   tarea.innerHTML = `<strong>${textoTarea}</strong><br><span>${textoDescripcion}</span>`;
 
@@ -119,6 +119,15 @@ function drop(ev) {
       tarea.style.display = "";
     });
 
+    // Cambiar color según la columna
+    tarea.classList.remove("pendiente", "progreso", "completado");
+    if (ev.currentTarget.id === "pendientes") {
+      tarea.classList.add("pendiente");
+    } else if (ev.currentTarget.id === "en-proceso") {
+      tarea.classList.add("progreso");
+    } else if (ev.currentTarget.id === "completadas") {
+      tarea.classList.add("completado");
+    }
     ev.currentTarget.appendChild(tarea);
   }
 }
