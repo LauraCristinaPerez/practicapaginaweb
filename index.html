@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Sobre puky</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="sky"></div>
+  <div class="tarjeta">
+
+    <h1>Puky es linda </h1>
+    <img src="IMAGES/WhatsApp Image 2025-07-22 at 1.28.00 PM.jpeg" alt="puky es mi mascota">
+    <div>
+      <p>Puky es dulce, tierna y seria en ocasiones, sus patas huelen a doritos</p>
+    </div>
+
+
+    <ul class="grid-list-puky">
+      <li>Puky bella</li>
+      <li>Puky tierna</li>
+      <li>Puky huele a queso</li>
+      <li>Puky es juguetona</li>
+    </ul>
+
+
+
+    <p>Puky es la más adultas de mis 4 perros, suele ser perezosa y tener sueño todo el día,
+      en ocasiones suele morder a los demás perros
+      porque la molestan mucho, es gracioso porque puky es juguetona.
+    </p>
+    <p> la canción llamada <a href="https://youtu.be/jqK_Owus9CE?si=dtOml7tTdVrjSKU_">Hijo del corazón</a>
+      es la canción favorita de puky.</p>
+    <div class="calculadora">
+      <h2>Calculadora</h2>
+      <div>
+        <input type="number" id="number1" placeholder="Número 1">
+        <input type="number" id="number2" placeholder="Número 2">
+      </div>
+      <br><br>
+      <div class="botones">
+        <button id="sumar">
+          <img src="IMAGES\SUMA.png" alt="Sumar">
+        </button>
+        <button id="restar">
+          <img src="IMAGES\RESTA.png" alt="Restar">
+        </button>
+        <button id="multiplicar">
+          <img src="IMAGES\MULTIPLICACIÓN.png" alt="Multiplicar">
+        </button>
+        <button id="dividir">
+          <img src="IMAGES\DIVISION.png" alt="Dividir">
+        </button>
+      </div>
+      <br><br>
+      <div>
+        <label for="resultado">Resultado:</label>
+        <input type="number" id="resultado" placeholder="Resultado" readonly>
+      </div>
+    </div>
+    <!--  lista de tarea tipo Kanban -->
+    <h2>Lista To Do Tipo Kanban</h2>
+
+    <div class="kanban container">
+
+      <div class="kanban-head">
+
+        <strong class="kanban head title">Lista de Tareas</strong>
+      </div>
+
+      <div class="kanban-table">
+
+        <div class="kanban-block-kanban-form">
+          <strong class="kanban-form-title">Agregar Nueva Tarea</strong>
+
+          <div class="container-inputs">
+
+            <strong class="strong-input">Nueva Tarea:</strong>
+            <input type="text" id="nueva-tarea" class="input-text">
+
+            <strong class="strong-input">Descripción de Tarea:</strong>
+            <textarea id="descripcion-tarea" class="textarea" rows="4"></textarea>
+          </div>
+
+          <button class="btn-crear" id="btn-crear-editar" onclick="agregarTareaKanban(event)">
+            Crear Tarea
+          </button>
+
+        </div>
+
+        <div class="kanban-block" id="pendientes" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <strong>PENDIENTES</strong>
+        </div>
+
+        <div class="kanban-block" id="en-proceso" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <strong>EN PROCESO</strong>
+        </div>
+
+        <div class="kanban-block" id="completadas" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <strong>COMPLETADAS</strong>
+          <div class="kanban-items" id="kanban-completadas"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
