@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Sobre puky</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="typescript" href="scripts/main.tsx" type="text/typescript">
 </head>
 
 <body>
@@ -57,7 +58,7 @@
       <br><br>
       <div>
         <label for="resultado">Resultado:</label>
-        <input type="number" id="resultado" placeholder="Resultado" readonly>
+        <input type="number" id="resultado" placeholder="Resultado" readonly value={resultado}>
       </div>
     </div>
     <!--  lista de tarea tipo Kanban -->
@@ -108,7 +109,10 @@
 
     </div>
 
-    <script src="scripts/main.js"></script>
 </body>
 
 </html>
+<script src="main.js"></script>
+
+
+</script>
